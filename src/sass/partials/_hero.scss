@@ -1,0 +1,64 @@
+.hero {
+  padding-bottom: 3.75rem;
+  background: $color-main url('../img/hero/background/hero-bg.jpg') center / cover no-repeat;
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media screen and (max-width: 768px) {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    max-width: 37.5rem;
+    text-align: right;
+    font-size: 2.563rem;
+    line-height: 1.22;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    text-align: right;
+    margin-top: 0.7em;
+    color: $color-secondary;
+    font-family: $font-text--bold;
+    font-size: 1.688rem;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__request-callback {
+    padding: 2.5rem 2.187rem;
+    margin-top: 4.125rem;
+    box-shadow: 0 0 2.375rem $color-shadow;
+    border-radius: 1.25rem;
+    background-color: $color-light;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

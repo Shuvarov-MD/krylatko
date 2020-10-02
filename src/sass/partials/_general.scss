@@ -4,6 +4,10 @@
 
 html {
   height: 100%;
+  
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -15,7 +19,89 @@ body {
   font-weight: 400;
 }
 
+h1, h2, h3, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .wrapper {
   flex: 1 0 auto;
 }
 
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+}
+
+.title {
+  font-family: $font-title;
+}
+
+.section {
+  padding-top: 5rem;
+}
+
+.request-callback {
+  &__title {
+    margin-bottom: 0.7em;
+    text-align: center;
+    color: $color-secondary;
+    font-family: $font-title;
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    margin-bottom: 1.583em;
+    text-align: center;
+    color: $color-dark;
+    font-family: $font-text;
+    font-size: 0.75rem;
+  }
+
+  &__input {
+    margin-bottom: 1rem;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 1em;
+  border-radius: 1.25rem;
+  border: 0.063rem solid $color-main;
+  text-align: center;
+  color: $color-dark;
+  font-family: $font-text--bold;
+  font-size: 0.813rem;
+  outline: none;
+
+  &::placeholder {
+    color: lighten($color-dark, 25%);
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1.31em;
+  text-align: center;
+  box-shadow: 0 0.313rem 0.313rem $color-shadow--hover;
+  border: none;
+  border-radius: 1.438rem;
+  background-color: $color-secondary;
+  color: $color-light;
+  font-family: $font-title;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+
+  @media screen and (min-width: 992px) {
+    &:hover {
+      background-color: darken($color-secondary, 15%);
+    }
+  }
+}

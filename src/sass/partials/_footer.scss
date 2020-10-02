@@ -6,17 +6,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 576px) {
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
   }
 
   &__privacy-policy {
     color: $color-secondary;
     font-size: 0.875rem;
+    transition: color 0.3s linear;
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: darken($color-secondary, 20%);
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 1em;
+    }
   }
 
   &__details {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @media screen and (max-width: 576px) {
+      align-items: center;
+      margin-bottom: 1em;
+    }
   }
 
   &__text {
