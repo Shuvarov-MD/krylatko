@@ -1,0 +1,43 @@
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__tel {
+    color: $color-dark;
+    font-family: $font-title;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: lighten($color-dark, 20%);
+      }
+    }
+  }
+
+  &__callback {
+    color: $color-secondary;
+    font-family: $font-text--bold;
+    font-size: 0.875rem;
+    transition: color 0.3s linear;
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        color: darken($color-secondary, 20%);
+      }
+    }
+  }
+}
