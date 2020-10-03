@@ -1,0 +1,41 @@
+.statistics {
+  padding-top: 4.375rem;
+  padding-bottom: 2.812rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    flex-basis: 10.625rem;
+    margin-bottom: 1.875rem;
+
+    @media screen and (max-width: 708px) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__number {
+    display: block;
+    text-align: center;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
+    color: $color-secondary;
+    font-family: $font-title;
+    font-size: 3rem;
+    line-height: 0.85;
+    background: url('../img/statistics/background/armchair.svg') center no-repeat;
+
+    @media screen and (max-width: 576px) {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-top: 1.111em;
+  }
+}
