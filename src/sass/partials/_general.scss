@@ -174,3 +174,58 @@ h1, h2, h3, p {
     border-radius: 50%;
   }
 }
+
+.price {
+  &--old {
+    display: block;
+    text-align: center;
+    color: darken($color-dark, 100%);
+    font-size: 1.125rem;
+    line-height: 2;
+    text-decoration: line-through;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 7.5rem;
+      height: 0.063rem;
+      background-color: $color-main;
+    }
+  }
+
+  &--new {
+    display: block;
+    text-align: center;
+    color: $color-third;
+    font-family: $font-title;
+    font-size: 1.875rem;
+    line-height: 1.57;
+  }
+}
+
+.order {
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.187rem;
+  }
+
+  &__text {
+    max-width: 4.687rem;
+    font-family: $font-title;
+    font-size: 0.875rem;
+    color: $color-third;
+  }
+
+  &__date {
+    width: 3rem;
+    height: 2.688rem;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    padding: 0.266em 0.6em 0.266em 0.433em;
+    color: $color-light;
+    font-family: $font-title;
+    font-size: 1.875rem;
+    background: url('../img/discount/background/calendar-bg.png') center / cover no-repeat;
+  }
+}
