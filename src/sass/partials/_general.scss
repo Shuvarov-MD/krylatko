@@ -39,7 +39,26 @@ h1, h2, h3, p {
 }
 
 .title {
+  font-size: 2.25rem;
   font-family: $font-title;
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+
+.text {
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
 }
 
 .section {
@@ -49,7 +68,6 @@ h1, h2, h3, p {
 .request-callback {
   &__title {
     margin-bottom: 0.7em;
-    text-align: center;
     color: $color-secondary;
     font-family: $font-title;
     font-size: 1.25rem;
@@ -57,7 +75,6 @@ h1, h2, h3, p {
 
   &__text {
     margin-bottom: 1.583em;
-    text-align: center;
     color: $color-dark;
     font-family: $font-text;
     font-size: 0.75rem;
@@ -86,7 +103,7 @@ h1, h2, h3, p {
 
 .button {
   width: 100%;
-  padding: 1.31em;
+  padding: 1.07em;
   text-align: center;
   box-shadow: 0 0.313rem 0.313rem $color-shadow--hover;
   border: none;
@@ -97,11 +114,63 @@ h1, h2, h3, p {
   font-size: 0.875rem;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
   transition: background-color 0.3s linear;
 
   @media screen and (min-width: 992px) {
     &:hover {
       background-color: darken($color-secondary, 15%);
     }
+  }
+}
+
+.article {
+  &__content {
+    max-width: 24.7rem;
+
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: $color-secondary;
+    font-family: $font-title;
+    font-size: 1.875rem;
+    margin-top: 1.2em;
+    margin-bottom: 1.1em;
+
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem;
+
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
+  }
+
+  &__picture-wrap {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 11.438rem;
+      height: 1.625rem;
+      left: 20%;
+      bottom: -1.625rem;
+      background: url('../img/pluses/shadow.png') center no-repeat;
+    }
+  }
+
+  &__picture {
+    width: 18.75rem;
+    height: 18.75rem;
+    overflow: hidden;
+    border-radius: 50%;
   }
 }
