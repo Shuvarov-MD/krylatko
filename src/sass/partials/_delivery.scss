@@ -1,0 +1,115 @@
+.delivery {
+  padding-top: 3.75rem;
+  padding-bottom: 4.375rem;
+  background: url('../img/delivery/background/delivery-bg.png') center / cover no-repeat;
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+    background-color: $color-main;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 46.25rem;
+    padding-right: 5.312rem;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 1.625rem;
+
+    @media screen and (min-width: 577px) {
+      &::after {
+        position: absolute;
+        content: '';
+        width: 4.063rem;
+        height: 6.563rem;
+        background: url('../img/delivery/arrow-down.svg') center no-repeat;
+        top: 4.062rem;
+        right: -5.312rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1.55em;
+  }
+
+  &__subtitle {
+    display: block;
+    line-height: 1.7;
+    color: $color-secondary;
+    background: $color-light;
+    margin-top: 0.4em;
+  }
+
+  &__input {
+    margin-bottom: 1.25rem;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 1.125rem;
+    left: 7.5rem;
+    width: 10rem;
+    height: 9.813rem;
+    background-color: $color-light;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      position: relative;
+      margin-top: 1.875rem;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__text {
+    color: $color-secondary;
+    font-family: $font-title;
+    font-size: 1.063rem;
+    margin-bottom: 0.294em;
+  }
+
+  &__price {
+    &--old {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: darken($color-dark, 100%);
+      font-size: 0.875rem;
+      line-height: 2.69;
+      text-decoration: line-through;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 7.5rem;
+        height: 0.063rem;
+        background-color: $color-main;
+      }
+    }
+
+    &--new {
+      color: $color-third;
+      font-family: $font-title;
+      font-size: 1.5rem;
+      line-height: 1.57;
+    }
+  }
+}
