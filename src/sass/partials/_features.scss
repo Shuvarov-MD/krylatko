@@ -1,0 +1,118 @@
+.features {
+  padding-top: 8.25rem;
+  padding-bottom: 4.5rem;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 6.25rem;
+    padding-bottom: 1.687rem;
+  }
+
+  &__container {
+    max-width: 51.875rem;
+    margin: 0 auto;
+    background: url('../img/features/background/features-bg.jpg') center no-repeat;
+
+    @media screen and (max-width: 768px) {
+      background: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: 769px) {
+      &:first-of-type {
+        margin-bottom: 5rem;
+
+        .features__content {
+          &:first-of-type {
+            &::after {
+              position: absolute;
+              content: '';
+              width: 7.625rem;
+              height: 6.813rem;
+              top: 0.312rem;
+              right: -8.437rem;
+              background: url('../img/features/line-top-down.svg') no-repeat;
+            }
+          }
+  
+          &:last-of-type {
+            &::before {
+              position: absolute;
+              content: '';
+              width: 9.375rem;
+              height: 4.875rem;
+              top: -2.437rem;
+              left: -8.937rem;
+              background: url('../img/features/line-down-top.svg') no-repeat;
+            }
+          }
+        }
+      }
+  
+      &:last-of-type {
+        .features__content {
+          &:first-of-type {
+            &::after {
+              position: absolute;
+              content: '';
+              width: 9rem;
+              height: 3.375rem;
+              top: -2.062rem;
+              right: -7.75rem;
+              background: url('../img/features/line-left-right.svg') no-repeat;
+            }
+          }
+  
+          &:last-of-type {
+            &::before {
+              position: absolute;
+              content: '';
+              width: 8.938rem;
+              height: 3.313rem;
+              top: 0.375rem;
+              left: -9.375rem;
+              background: url('../img/features/line-right-left.svg') no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    flex-basis: 15.625rem;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 2.812rem;
+    }
+
+    &--left {
+      text-align: right;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-secondary;
+    font-family: $font-title;
+    font-size: 1.25rem;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    margin-top: 1.357em;
+  }
+}

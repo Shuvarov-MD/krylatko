@@ -1,8 +1,10 @@
 .certification {
   padding-bottom: 5.75rem;
-  background-image: linear-gradient(to bottom, $color-light 0%, $color-main 100%);
+  background-image: linear-gradient(to bottom, lighten($color-main, 4%) 0%, $color-main 100%);
 
   &__wrap {
+    max-width: 850px;
+    margin: 0 auto;
     margin-top: 5.5rem;
     display: flex;
     justify-content: space-around;
