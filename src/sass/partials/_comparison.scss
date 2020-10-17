@@ -1,0 +1,196 @@
+.comparison {
+  padding-top: 3.937rem;
+  padding-bottom: 5rem;
+
+  &__container {
+    display: flex;
+    background: url('../img/comparison/background/comparison-bg.png') center no-repeat;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column-reverse;
+      background: none;
+      align-items: center;
+    }
+  }
+
+  &__block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    &--left {
+      text-align: right;
+      color: #939393;
+      padding-right: 2.5rem;
+      align-items: flex-end;
+
+      @media screen and (max-width: 576px) {
+        align-items: center;
+        text-align: left;
+        padding-right: 0;
+        max-width: 90%;
+        margin-top: 1.875rem;
+      }
+    }
+
+    &--right {
+      color: $color-secondary;
+      padding-left: 1.875rem;
+      align-items: flex-start;
+
+      @media screen and (max-width: 576px) {
+        align-items: center;
+        padding-left: 0;
+        max-width: 90%;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 6.818em;
+    margin-bottom: 2.045em;
+    font-size: 1.375rem;
+
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
+      margin-bottom: 1.363em;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    list-style: none;
+
+    @media screen and (max-width: 576px) {
+      list-style-type: circle;
+    }
+    
+    &--left {
+      padding-right: 51%;
+      padding-left: 0;
+
+      @media screen and (max-width: 767px) {
+        padding-right: 30%;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding-right: 0;
+      }
+    }
+
+    &--right {
+      padding-right: 0;
+      padding-left: 51%;
+
+      @media screen and (max-width: 767px) {
+        padding-left: 30%;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    font-family: $font-title;
+    font-size: 0.938rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 2em;
+    }
+
+    &--left {
+      @media screen and (min-width: 768px) {
+        &:first-of-type::after {
+          position: absolute;
+          content: '';
+          top: 0.312rem;
+          right: -6.25rem;
+          width: 5.063rem;
+          height: 2.563rem;
+          background: url('../img/comparison/line-left-1.svg') center no-repeat;
+        }
+  
+        &:nth-of-type(2)::after {
+          position: absolute;
+          content: '';
+          top: 0.187rem;
+          right: -6.562rem;
+          width: 5.438rem;
+          height: 1.813rem;
+          background: url('../img/comparison/line-left-2.svg') center no-repeat;
+        }
+  
+        &:nth-of-type(3)::after {
+          position: absolute;
+          content: '';
+          top: -0.875rem;
+          right: -6.562rem;
+          width: 5.438rem;
+          height: 1.438rem;
+          background: url('../img/comparison/line-left-3.svg') center no-repeat;
+        }
+  
+        &:last-of-type::after {
+          position: absolute;
+          content: '';
+          top: -1.75rem;
+          right: -6.562rem;
+          width: 5.313rem;
+          height: 2.125rem;
+          background: url('../img/comparison/line-left-4.svg') center no-repeat;
+        }
+      }
+    }
+
+    &--right {
+      @media screen and (min-width: 768px) {
+        &:first-of-type::after {
+          position: absolute;
+          content: '';
+          top: 0.25rem;
+          left: -6.562rem;
+          width: 5.125rem;
+          height: 2.625rem;
+          background: url('../img/comparison/line-right-1.svg') center no-repeat;
+        }
+  
+        &:nth-of-type(2)::after {
+          position: absolute;
+          content: '';
+          top: 0.187rem;
+          left: -6.562rem;
+          width: 5.375rem;
+          height: 1.875rem;
+          background: url('../img/comparison/line-right-2.svg') center no-repeat;
+        }
+  
+        &:nth-of-type(3)::after {
+          position: absolute;
+          content: '';
+          top: -0.875rem;
+          left: -6.562rem;
+          width: 5.5rem;
+          height: 1.375rem;
+          background: url('../img/comparison/line-right-3.svg') center no-repeat;
+        }
+  
+        &:last-of-type::after {
+          position: absolute;
+          content: '';
+          top: -1.562rem;
+          left: -6.562rem;
+          width: 5.25rem;
+          height: 2.125rem;
+          background: url('../img/comparison/line-right-4.svg') center no-repeat;
+        }
+      }
+    }
+  }
+}
