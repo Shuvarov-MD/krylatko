@@ -24,7 +24,7 @@
 
     &--left {
       text-align: right;
-      color: #939393;
+      color: lighten($color-dark, 25%);
       padding-right: 2.5rem;
       align-items: flex-end;
 
