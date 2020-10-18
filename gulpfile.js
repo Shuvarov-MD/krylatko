@@ -48,6 +48,7 @@ function script(cb) {
   cb();
 }
 
+
 function clean(cb) {
   del('./build/**');
   cb();
